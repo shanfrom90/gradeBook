@@ -5643,11 +5643,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wecan\\gradebook\\test\\GradeBook.Tests\\GradeBook.Tests.csproj",
+      "projectUniqueName": "c:\\Users\\wecan\\gradebook\\test\\GradeBook.Tests\\GradeBook.Tests.csproj",
       "projectName": "GradeBook.Tests",
-      "projectPath": "C:\\Users\\wecan\\gradebook\\test\\GradeBook.Tests\\GradeBook.Tests.csproj",
+      "projectPath": "c:\\Users\\wecan\\gradebook\\test\\GradeBook.Tests\\GradeBook.Tests.csproj",
       "packagesPath": "C:\\Users\\wecan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wecan\\gradebook\\test\\GradeBook.Tests\\obj\\",
+      "outputPath": "c:\\Users\\wecan\\gradebook\\test\\GradeBook.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wecan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5664,8 +5664,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\wecan\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
-              "projectPath": "C:\\Users\\wecan\\gradebook\\src\\GradeBook\\GradeBook.csproj"
+            "c:\\Users\\wecan\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
+              "projectPath": "c:\\Users\\wecan\\gradebook\\src\\GradeBook\\GradeBook.csproj"
             }
           }
         }
