@@ -3,6 +3,7 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+    public delegate string WriteLogDelegate(string logMessage);
     public class TypeTests
     {
         //any members of a class are reference types
@@ -13,9 +14,30 @@ namespace GradeBook.Tests
         //int is really struct Int32
         //double is really struct Double
         //book is struct Boolean
-        
+
+        int count = 0;
         [Fact]
-        public void Test1(){
+        public void WriteLogDelegateCanPointToMethod(){
+            WriteLogDelegate log = ReturnMessage;
+            log += ReturnMessage;
+            log += IncrementCount;
+
+            var result = log("Hello");
+            Assert.Equal(3, count);
+        
+        }
+
+        string ReturnMessage(string message){
+            count++;
+            return message;
+        }
+
+        string IncrementCount(string message){
+            count++;
+            return message;
+        }
+        [Fact]
+        public void ValueTypesAlsoPassByValue(){
             var x = GetInt();
 
             // in order to get this test to pass, you need to use ref because ints are value types
@@ -44,9 +66,9 @@ namespace GradeBook.Tests
              
         }
 
-        private void GetBookSetName(ref Book book, string name)
+        private void GetBookSetName(ref InMemoryBook book, string name)
         {
-            book = new Book(name);
+            book = new InMemoryBook(name);
         }
 
         [Fact]
@@ -58,9 +80,9 @@ namespace GradeBook.Tests
              
         }
 
-        private void GetBookSetName(Book book, string name)
+        private void GetBookSetName(InMemoryBook book, string name)
         {
-            book = new Book(name);
+            book = new InMemoryBook(name);
         }
 
   
@@ -73,7 +95,7 @@ namespace GradeBook.Tests
              
         }
 
-        private void SetName(Book book, string name){
+        private void SetName(InMemoryBook book, string name){
             book.Name = name;
         }
 
@@ -122,9 +144,9 @@ namespace GradeBook.Tests
             Assert.True(object.ReferenceEquals(book1, book2));
         }
 
-        Book GetBook(string name){
+        InMemoryBook GetBook(string name){
             
-            return new Book(name);
+            return new InMemoryBook(name);
         }
     }
 }
